@@ -1,3 +1,3 @@
-# Template
+# Binary Search Trees with Merge Sort 
 
-Template for basic projects
+Merge Sort is used to organize all arrays and then turned into Binary Trees
