@@ -8,8 +8,14 @@ const driverScript = function (max = 16) {
   }
   return array;
 };
+
 const binaryTree = new Tree();
+
 binaryTree.buildTree(driverScript(16));
+binaryTree.insert(100);
+binaryTree.deleteItem(400);
+binaryTree.prettyPrint(binaryTree.root);
+console.log(binaryTree.find(100));
 console.log(binaryTree.isBalanced());
 
 const levelOrder = [];
@@ -35,11 +41,13 @@ binaryTree.postOrderForEach((data) => {
   postOrder.push(data);
 });
 console.log(`Post-Order: ${postOrder}`);
+
 binaryTree.prettyPrint(binaryTree.root);
 
 binaryTree.insert(500);
 binaryTree.insert(400);
 console.log(binaryTree.isBalanced());
+
 binaryTree.rebalance();
 binaryTree.prettyPrint(binaryTree.root);
 console.log(binaryTree.isBalanced());
@@ -67,4 +75,3 @@ binaryTree.postOrderForEach((data) => {
   postOrder2.push(data);
 });
 console.log(`Post-Order: ${postOrder2}`);
-binaryTree.prettyPrint(binaryTree.root);
